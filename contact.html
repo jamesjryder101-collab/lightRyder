@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us — Light Ryder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <img src="light ryder.png" alt="Light Ryder logo" class="logo nav-logo">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main class="content">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to collaborate? Send us a message.</p>
+
+    <!-- ⭐ Updated with Formspree ⭐ -->
+    <form 
+      class="contact-form" 
+      action="https://formspree.io/f/mrbnyreq" 
+      method="POST"
+    >
+      <label>Name<br>
+        <input type="text" name="name" required>
+      </label>
+
+      <label>Email<br>
+        <input type="email" name="email" required>
+      </label>
+
+      <label>Message<br>
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+
+      <input type="hidden" name="_subject" value="New message from Light Ryder website">
+
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

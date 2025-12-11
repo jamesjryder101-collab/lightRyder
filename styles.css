@@ -1,0 +1,50 @@
+/* Blue background and centered layout */
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+:root{--blue:#1e90ff}
+html,body{height:100%;margin:0}
+body{display:flex;align-items:center;justify-content:center;background:var(--blue);font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#fff}
+.wrap{display:flex;flex-direction:column;align-items:center;gap:18px}
+.logo{width:160px;height:160px;object-fit:contain;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.25);background:rgba(255,255,255,0.06)}
+.featured-image{width:200px;height:auto;max-width:90%;margin-bottom:20px;border-radius:12px;opacity:0.85}
+.brand{font-size:120px;margin:0;font-weight:700;letter-spacing:0px;text-transform:none;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
+
+/* Color-changing animation for the brand text */
+.brand{
+  animation: colorShift 15s linear infinite;
+
+}
+
+@keyframes colorShift{
+  0% { color: #ff4444 }
+  25% { color: #ffdd00 }
+  50% { color: #00ff88 }
+  75% { color: #00ddff }
+  100% { color: #ff4444 }
+}
+
+@media (max-width:520px){
+  .brand{font-size:40px}
+  .logo{width:120px;height:120px}
+}
+
+/* Feature section styling */
+.feature{background:rgba(255,255,255,0.08);border-radius:12px;padding:28px;margin-top:20px;max-width:600px}
+.feature h2{margin-top:0;font-size:24px;color:#ffd700}
+.feature ul{margin:14px 0;padding-left:20px}
+.feature li{margin:8px 0;line-height:1.6}
+
+/* Header / nav styles */
+.site-header{width:100%;padding:18px 24px;box-sizing:border-box;position:fixed;top:0;left:0;background:linear-gradient(180deg, rgba(0,0,0,0.05), transparent);backdrop-filter: blur(4px)}
+.nav{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:18px}
+.nav-logo{width:56px;height:56px}
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:14px}
+.nav-list a{color:white;text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px;transition:background .15s, color .15s}
+.nav-list a:hover{background:rgba(255,255,255,0.08)}
+
+.content{max-width:900px;margin:120px auto 60px;padding:20px;color:#fff}
+.content h2{font-size:32px;margin-top:0}
+.contact-form{display:flex;flex-direction:column;gap:12px;max-width:560px}
+.contact-form input,.contact-form textarea{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);color:#fff}
+.contact-form button{padding:10px 14px;border:none;border-radius:8px;background:#ffd700;color:#000;font-weight:700;cursor:pointer}
+
+.wrap{margin-top:120px}
